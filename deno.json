@@ -1,0 +1,24 @@
+{
+    "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+    "version": "0.1.0",
+    "fmt": {
+        "options": {
+            "indentWidth": 4,
+            "lineWidth": 100,
+            "singleQuote": true,
+            "proseWrap": "always"
+        }
+    },
+    "lint": {
+        "rules": {
+            "exclude": ["prefer-const"]
+        }
+    },
+    "tasks": {
+        "compile": "deno compile --output ./vimeo-dl --allow-net --allow-write --allow-run ./src/main.ts"
+    },
+    "imports": {
+        "@std/http": "jsr:@std/http@^1.0.3",
+        "cliffy": "https://deno.land/x/cliffy@v1.0.0-rc.4/command/mod.ts"
+    }
+}
